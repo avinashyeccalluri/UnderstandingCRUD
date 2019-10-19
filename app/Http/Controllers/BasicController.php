@@ -16,7 +16,7 @@ class BasicController extends Controller
     public function store(studentdatabase $student)
     {
         request()->validate(['firstname'=>['required','min:3','max:10'],'lastname'=>['required','min:3','max:10'],'mobilenumber'=>['required','min:3','max:10']]);
-        $student->create(request(['firstname','lastname','mobilenumber']));        
+        $student->create(request(['firstname','lastname','mobilenumber']));
         return redirect('/student');
     }
     public function show(studentdatabase $student)
@@ -27,15 +27,14 @@ class BasicController extends Controller
     {
         return view('student.edit',compact('student'));
     }
-    public  function update( studentdatabase $student)    
-    {        
-        $student->update(request(['firstname','lastname','mobilenumber']));        
+    public  function update( studentdatabase $student)
+    {
+        $student->update(request(['firstname','lastname','mobilenumber']));
         return redirect('/student');
-        
+
     }
     public function destroy(studentdatabase $student)
     {
-        // studentdatabase::find($id)->delete();
         $student->delete();
         return redirect('/student');
     }
