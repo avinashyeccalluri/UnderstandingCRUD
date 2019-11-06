@@ -24,7 +24,7 @@
     </form>
     <form  action="/student/{{$student->id}}" method="post">
     @csrf
-    @method('PATCH')
+    @method('DELETE')
 
         <div>
         <input type="submit" value="Delete">

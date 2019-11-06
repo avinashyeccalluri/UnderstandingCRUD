@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\task;
 
 class studentdatabase extends Model
 {
@@ -12,7 +13,7 @@ class studentdatabase extends Model
     // protected $guarded=[];
 
     public function tasks(){
-        return $this->hasMany(task::class);
+        return $this->hasMany('App\task','id');
     }
 
 

@@ -9,14 +9,12 @@
 <body>
   The first names area <br> <hr>
   @foreach($student as $a)
-  <!-- <li> -->
       <a href="/student/{{$a->id}}">
       {{$a->firstname}}<br>
         </a>
         {{$a->lastname}}<br>
         {{$a->mobilenumber}}<br>
-        <hr>
-  <!-- </li> -->
+        
   @endforeach
 </body>
 </html>
